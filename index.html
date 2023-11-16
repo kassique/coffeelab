@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/icon-logo.ico">
+    <title>CoffeeLab</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div id="loader" class="loader"> <!--Animação durante o carregamento da página-->
+        <div class="circle"></div>
+    </div>
+    <header>
+        <nav class="navbar"> <!--Navbar responsiva contendo lista de links-->
+            <div class="logo">
+                <a href="index.html"><img src="./assets/svg/desktop-logo.svg" class="desktop-logo"></a>
+                <a href="index.html"><img src="./assets/svg/mobile-logo.svg" class="mobile-logo"></a>
+            </div>
+            <div class="navbar-left-desktop">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><a href="#home" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="#about" class="navbar-link">Sobre</a></li>
+                    <li class="navbar-item"><a href="#menu" class="navbar-link">Menu</a></li>
+                </ul>
+                <button class="navbar-btn-desktop">Login</button>
+            </div>
+            <div class="navbar-left-mobile">
+                <i class="fa-solid fa-circle-user navbar-btn-mobile"></i>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars hamburger-btn"></i>
+                    <i class="fa-solid fa-circle-xmark hamburger-btn"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home"> <!--Seção 'homepage' contendo descrição e botão call to action-->
+            <div class="home-container">
+                <div class="home-content">
+                    <h1 class="title">Onde a ciência do <span class="title-strong">sabor</span> encontra a arte do <span class="title-strong">café.</span></h1>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam.
+                    </p>
+                    <button class="btn">
+                        <p class="btn-text">Pedir agora</p>
+                        <i class="fa-solid fa-arrow-right btn-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="features"> <!--Seção 'features' contendo descrição e cards-->
+            <div class="features-container">
+                <p class="text">Principais benefícios</p>
+                <h2 class="title small">Porque nos escolher?</h2>
+                <div class="features-cards">
+                    <div class="features-card">
+                        <i class="fa-solid fa-list-check features-card-icon"></i>
+                        <p class="features-card-title">Menu variado</p>
+                        <p class="features-card-text">
+                            Nullam laoreet est et porttitor elementum aenean eget justo.
+                        </p>
+                    </div>
+                    <div class="features-card">
+                        <i class="fa-solid fa-qrcode features-card-icon"></i>
+                        <p class="features-card-title">Pagamento fácil</p>
+                        <p class="features-card-text">
+                            Nullam laoreet est et porttitor elementum aenean eget justo.
+                        </p>
+                    </div>
+                    <div class="features-card">
+                        <i class="fa-solid fa-hourglass-half features-card-icon"></i>
+                        <p class="features-card-title">Entrega rápida</p>
+                        <p class="features-card-text">
+                            Nullam laoreet est et porttitor elementum aenean eget justo.
+                        </p>
+                    </div>
+                    <div class="features-card">
+                        <i class="fa-solid fa-percent features-card-icon"></i>
+                        <p class="features-card-title">Ofertas diárias</p>
+                        <p class="features-card-text">
+                            Nullam laoreet est et porttitor elementum aenean eget justo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about"> <!--Seção 'about' contendo imagem, descrição e botão call to action-->
+            <div class="about-container">
+                <img src="./assets/about-img.png" alt="Copo de café" class="about-img">
+                <div class="about-content">
+                    <h1 class="title">Sobre <strong class="title-strong">nós.</strong></h1>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet lacinia lacus, at interdum mauris faucibus eget. Praesent euismod nec est ac scelerisque. Pellentesque arcu felis, sagittis at accumsan non, blandit sit amet quam ut imperdiet, ex nec sagittis.
+                    </p>
+                    <button class="btn">
+                        <p class="btn-text">Saiba mais</p>
+                        <i class="fa-solid fa-plus btn-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="menu"> <!--Seção 'menu' contendo filtro de categorias e cards com botão call to action-->
+            <div class="menu-container">
+                <h2 class="title small">Descubra o cafézinho ideal pra hoje.</h2>
+                <ul class="menu-filter">
+                    <li><button class="menu-filter-item active" onclick="expresso()">Expresso</button></li>
+                    <li><button class="menu-filter-item" onclick="latte()">Latte</button></li>
+                    <li><button class="menu-filter-item" onclick="mocha()">Mocha</button></li>
+                </ul>
+                <div id="expresso">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img1.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img1.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img1.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img1.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="latte">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img2.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img2.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img2.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img2.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="mocha">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img3.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img3.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img3.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="./assets/menu-item-img3.png" class="menu-item-img">
+                            <div class="menu-item-content">
+                                <p class="menu-item-title">Nome da bebida</p>
+                                <p class="menu-item-text">Lorem ipsum dolor.</p>
+                                <div class="menu-rating">
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star rating-icon"></i>
+                                    <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                                </div>
+                                <button class="btn">
+                                    <p class="btn-text">Pedir agora</p>
+                                    <i class="fa-solid fa-arrow-right btn-icon"></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="feedback"> <!--Seção 'feedback' contendo descrição e cards-->
+            <div class="feedback-container">
+                <p class="text">Feedback</p>
+                <h2 class="title small">Nossos clientes felizes :D</h2>
+                <div class="feedback-cards">
+                    <div class="feedback-card">
+                        <div class="feedback-card-top">
+                            <div class="img-box">
+                                <img src="./assets/feedback-card-img1.jpg" class="feedback-card-img">
+                            </div>
+                            <p class="feedback-card-title">Maria Júlia</p>
+                        </div>
+                        <div class="feedback-card-content">
+                            <p class="feedback-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae felis vel ex facilisis dignissim. Nunc sed vulputate risus. Sed lobortis rutrum egestas.
+                            </p>
+                            <div class="feedback-rating">
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="feedback-card-top">
+                            <div class="img-box">
+                                <img src="./assets/feedback-card-img2.jpg" class="feedback-card-img">
+                            </div>
+                            <p class="feedback-card-title">Pedro Henrique</p>
+                        </div>
+                        <div class="feedback-card-content">
+                            <p class="feedback-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae felis vel ex facilisis dignissim. Nunc sed vulputate risus. Sed lobortis rutrum egestas.
+                            </p>
+                            <div class="feedback-rating">
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="feedback-card-top">
+                            <div class="img-box">
+                                <img src="./assets/feedback-card-img3.jpg" class="feedback-card-img">
+                            </div>
+                            <p class="feedback-card-title">Ana Gabriela</p>
+                        </div>
+                        <div class="feedback-card-content">
+                            <p class="feedback-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae felis vel ex facilisis dignissim. Nunc sed vulputate risus. Sed lobortis rutrum egestas.
+                            </p>
+                            <div class="feedback-rating">
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="feedback-card-top">
+                            <div class="img-box">
+                                <img src="./assets/feedback-card-img4.jpg" class="feedback-card-img">
+                            </div>
+                            <p class="feedback-card-title">André Luiz</p>
+                        </div>
+                        <div class="feedback-card-content">
+                            <p class="feedback-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae felis vel ex facilisis dignissim. Nunc sed vulputate risus. Sed lobortis rutrum egestas.
+                            </p>
+                            <div class="feedback-rating">
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star rating-icon"></i>
+                                <i class="fa-solid fa-star-half-stroke rating-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Kassio Batista.</p>
+    </footer>
+    <section id="login"> <!--Popup contendo formulário de login e cadastro-->
+        <div class="login-container">
+            <i class="fa-solid fa-circle-xmark login-btn-close"></i>
+            <div class="login-box login">
+                <div class="login-box-top">
+                    <img src="./assets/svg/mobile-logo.svg" class="login-logo">
+                    <h1 class="login-title">Login.</h1>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-envelope login-icon"></i>
+                    <input type="mail" required class="login-input">
+                    <label class="login-label">Email</label>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-key login-icon"></i>
+                    <input type="password" required class="login-input">
+                    <label class="login-label">Senha</label>
+                </div>
+                <div class="forgot-password">
+                    <a href="#" class="forgot-password-link">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <div class="login-register">
+                    <p class="login-register-text">Ainda não pussui uma conta?
+                        <a href="#" class="register-link">Cadastre-se</a>
+                    </p>
+                </div>
+            </div>
+            <div class="login-box register">
+                <div class="login-box-top">
+                    <img src="./assets/svg/mobile-logo.svg" class="login-logo">
+                    <h1 class="login-title">Cadastro.</h1>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-circle-user login-icon"></i>
+                    <input type="text" required class="login-input">
+                    <label class="login-label">Nome de usuário</label>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-envelope login-icon"></i>
+                    <input type="mail" required class="login-input">
+                    <label class="login-label">Email</label>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-key login-icon"></i>
+                    <input type="password" required class="login-input">
+                    <label class="login-label">Senha</label>
+                </div>
+                <div class="forgot-password">
+                    <label class="forgot-password-label">
+                        <input type="checkbox" class="forgot-password-input">Aceito os termos de uso
+                    </label>
+                </div>
+                <button type="submit" class="login-btn">Cadastrar</button>
+                <div class="login-register">
+                    <p class="login-register-text">Já possui uma conta?
+                        <a href="#" class="login-link">Faça login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/57019a9767.js" crossorigin="anonymous"></script>
+</body>
+</html>
